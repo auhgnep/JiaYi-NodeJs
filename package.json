@@ -1,0 +1,46 @@
+{
+  "name": "bqb-node-backed",
+  "version": "1.0.0",
+  "description": "Your project description",
+  "main": "server.js",
+  "scripts": {
+    "start": "cross-env NODE_ENV=dev node server.js",
+    "devOld": "cross-env NODE_ENV=dev node server.js",
+    "buildOld:dev": "cross-env NODE_ENV=development node build.js",
+    "buildOld:prod": "cross-env NODE_ENV=production node build.js",
+    "dev": "cross-env NODE_ENV=development webpack --env development mode=development",
+    "sit": "cross-env NODE_ENV=development webpack --env system mode=system",
+    "prod": "cross-env NODE_ENV=development webpack --env production mode=production",
+    "build:dev": "cross-env NODE_ENV=development webpack --env development mode=development",
+    "build:sit": "cross-env NODE_ENV=system webpack --env system mode=system",
+    "build:prod": "cross-env NODE_ENV=production webpack --env production mode=production"
+  },
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "canvas": "^2.11.2",
+    "cos-nodejs-sdk-v5": "^2.14.6",
+    "date-fns": "^4.1.0",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.1",
+    "express-fileupload": "^1.5.1",
+    "jsonwebtoken": "^9.0.2",
+    "mysql2": "^3.11.3",
+    "node-schedule": "^2.1.1",
+    "redis": "^4.7.0",
+    "sequelize": "^6.37.4",
+    "uuid": "^10.0.0",
+    "xlsx": "^0.18.5"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.26.0",
+    "@babel/preset-env": "^7.26.0",
+    "babel-loader": "^9.2.1",
+    "cross-env": "^7.0.3",
+    "nodemon": "^3.1.7",
+    "path-browserify": "^1.0.1",
+    "webpack": "^5.95.0",
+    "webpack-cli": "^5.1.4",
+    "webpack-node-externals": "^3.0.0",
+    "webpack-shell-plugin-next": "^2.3.2"
+  }
+}
