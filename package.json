@@ -2,6 +2,7 @@
   "name": "jiayi-nodejs",
   "version": "1.0.0",
   "description": "jiayi-nodejs",
+  "author": "嘉仪",
   "main": "server.js",
   "scripts": {
     "dev": "cross-env NODE_ENV=development webpack --env development mode=development",
