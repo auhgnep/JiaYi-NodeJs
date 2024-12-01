@@ -16,7 +16,7 @@
 
 嘉仪是一套全部开源的快速开发平台，毫无保留给个人及企业免费使用。
 
-* 前端代码，移步[JiaYi-Vue2](https://gitee.com/y_project/RuoYi-Vue)
+* 前端代码，移步[JiaYi-Vue2](https://gitee.com/auhgnep/JiaYi-Vue-Element)
 
 ## 内置功能
 
