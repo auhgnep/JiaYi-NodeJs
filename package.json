@@ -1,13 +1,9 @@
 {
-  "name": "bqb-node-backed",
+  "name": "jiayi-nodejs",
   "version": "1.0.0",
-  "description": "Your project description",
+  "description": "jiayi-nodejs",
   "main": "server.js",
   "scripts": {
-    "start": "cross-env NODE_ENV=dev node server.js",
-    "devOld": "cross-env NODE_ENV=dev node server.js",
-    "buildOld:dev": "cross-env NODE_ENV=development node build.js",
-    "buildOld:prod": "cross-env NODE_ENV=production node build.js",
     "dev": "cross-env NODE_ENV=development webpack --env development mode=development",
     "sit": "cross-env NODE_ENV=development webpack --env system mode=system",
     "prod": "cross-env NODE_ENV=development webpack --env production mode=production",
