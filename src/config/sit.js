@@ -16,12 +16,6 @@ module.exports = {
     secret: 'open-secret-key', 
     expiresIn: '24h'
   },
-  cos: {
-    secretId: 'AKIDTPBl8JI5nIpJhx2ufIl2LUyJSSGEC0d4',
-    secretKey: 'KUTOFAxzpTwEI9oHYcVCg8Wt7IMLBrOm',
-    bucket: 'bqb-1321633985',
-    region: 'ap-guangzhou'
-  },
   filePath: '/home/node-backed/uploadPath',
   server: {
     port: 8090
