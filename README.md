@@ -18,6 +18,50 @@
 
 * 前端代码，移步[JiaYi-Vue2](https://gitee.com/auhgnep/JiaYi-Vue-Element)
 
+
+
+## 本地启动与部署
+
+```shell
+# 配置上canvas_binary_host_mirror， 直接npm install的话canvas安装可能会有问题
+npm install --canvas_binary_host_mirror=https://registry.npmmirror.com/-/binary/canvas
+
+# 启动 使用的配置为src\config\index.js
+npm run dev
+
+# 测试环境打包 使用的配置为src\config\sit.js
+npm run build:sit
+
+# 生产环境打包 使用的配置为src\config\prod.js
+npm run build:prod
+
+# 生产启动 打包后会在dist内生成server.bundle.js
+nohup node server.bundle.js &
+
+# 生产启动 使用pm2启动
+pm2 start server.bundle.js --watch
+```
+
+
+
+### 功能版本
+
+NodeJs版本建议 ≥ 16
+
+Redis版本建议 ≥ 3.2.0
+
+Mysql版本建议 ≥ 5.6
+
+| 功能      | 框架          |
+| --------- | ------------- |
+| HTTP服务  | express       |
+| 数据库ORM | sequelize     |
+| 定时任务  | node-schedule |
+| 权限认证  | jwt           |
+| 打包      | webpack       |
+
+
+
 ## 内置功能
 
 1.  用户管理：用户是系统操作者，该功能主要完成系统用户配置。
