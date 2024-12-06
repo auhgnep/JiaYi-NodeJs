@@ -701,11 +701,14 @@ const dbConfig = {
   host: 'localhost',
   user: 'root',
   password: '123456',
-  database: 'blog'
+  database: 'jiayi'
 };
 
+const DATA_TABLE_NAME = 'sys_oper_log'
+const OUT_PATH = './src'
+
 const generator = new CodeGenerator(dbConfig);
-generator.generateFiles('sys_oper_log', './src')
+generator.generateFiles(DATA_TABLE_NAME, OUT_PATH)
   .then(() => console.log('Code generation completed!'))
   .catch(console.error);
 

@@ -63,6 +63,29 @@ Mysql版本建议 ≥ 5.6
 
 
 
+### 代码生成
+
+暂时只支持后端代码生成
+
+```javascript
+// 生成类 为/codeGenerator.js
+
+// 表名
+const DATA_TABLE_NAME = 'sys_oper_log'
+// 生成的路径
+const OUT_PATH = './src'
+
+const generator = new CodeGenerator(dbConfig);
+generator.generateFiles(DATA_TABLE_NAME, OUT_PATH)
+  .then(() => console.log('Code generation completed!'))
+  .catch(console.error);
+
+// 在项目根目录直接执行
+node ./codeGenerator.js
+```
+
+
+
 ## 内置功能
 
 1.  用户管理：用户是系统操作者，该功能主要完成系统用户配置。
