@@ -31,7 +31,7 @@ router.post('/', async(req, res) => {
   }
 });
 
-router.patch('/:id', async(req, res) => {
+router.patch('/update/:id', async(req, res) => {
   try {
     const result = await service.updateSysConfig(req, res)
     res.success(result, '操作成功');
@@ -40,7 +40,7 @@ router.patch('/:id', async(req, res) => {
   }
 });
 
-router.get('/:id', async(req, res) => {
+router.get('/get/:id', async(req, res) => {
   try {
     const result = await service.getSysConfigById(req, res)
     res.success(result, '操作成功');
