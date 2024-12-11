@@ -455,6 +455,10 @@ const getUserAddInfo = async (userId) => {
 
 const getInfo = async (userId = '1') => {
   const user = await getSysUserById(userId);
+  if (user) {
+    user.password = null
+  }
+
   const roleIds = user.roleIds;
   let roles = [];
   let permissions = [];
@@ -475,7 +479,7 @@ const getInfo = async (userId = '1') => {
   }
 
   // 2. 处理权限信息
-  if (userId === '1') {
+  if (userId === 1) {
     // 管理员拥有所有权限
     permissions = ["*:*:*"];
   } else if (roleIds && roleIds.length > 0) {
