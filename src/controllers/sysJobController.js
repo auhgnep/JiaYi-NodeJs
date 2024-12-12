@@ -76,4 +76,13 @@ router.patch('/run', async(req, res) => {
   }
 });
 
+router.patch('/changeStatus', async(req, res) => {
+  try {
+    const result = await service.changeStatus(req, res)
+    res.success(result, '操作成功');
+  } catch(error) {
+    res.error(error.message);
+  }
+});
+
 module.exports = { router, routePrefix };

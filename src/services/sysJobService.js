@@ -320,6 +320,11 @@ const getJobStatus = async (jobId) => {
   };
 };
 
+const changeStatus = async (req, res) => {
+  req.params.id = req.body.jobId
+  return await updateSysJob(req, res)
+};
+
 module.exports = {
   initJobs,
   createSysJob,
@@ -331,5 +336,6 @@ module.exports = {
   pauseJob,
   resumeJob,
   runOnce,
-  getJobStatus
+  getJobStatus,
+  changeStatus
 };
