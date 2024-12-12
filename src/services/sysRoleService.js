@@ -1,6 +1,8 @@
 const SysRole = require('../models/sysRole');
 const { Op } = require('sequelize');
 const SysRoleMenu = require('../models/sysRoleMenu');
+const SysRoleDept = require('../models/sysRoleDept');
+const { sequelize } = require('../database');
 
 const createSysRole = async (req, res) => {
   const { menuIds = [] } = req.body;
@@ -219,6 +221,59 @@ const changeUseFlag = async (req, res) => {
   });
 };
 
+const findCheckRoleDept = async (roleId) => {
+  const sysRoleDeptList = await SysRoleDept.findAll({
+    where: {
+      roleId,
+      status: '0'
+    }
+  });
+
+  if (sysRoleDeptList && sysRoleDeptList.length > 0) {
+    return sysRoleDeptList.map(item => item.deptId)
+  }
+
+  return []
+}
+
+const updateDataScope = async (req) => {
+  const { deptIds = [], roleId, dataScope } = req.body;
+
+  const sysRole = await SysRole.findOne({
+    where: {
+      roleId: roleId,
+      status: '0'
+    }
+  });
+
+  if (!sysRole) {
+    throw new Error('数据不存在');
+  }
+
+  await sysRole.update({
+    dataScope,
+    updateTime: new Date(),
+    updateBy: req.user?.username || 'system'
+  });
+  
+  // 删除旧的关联
+  await SysRoleDept.destroy({
+    where: {
+      roleId: sysRole.roleId
+    }
+  });
+
+  const roleDeptItems = deptIds.map(deptId => ({
+    roleId: sysRole.roleId,
+    deptId,
+    createTime: new Date(),
+    createBy: req.user?.username || 'system'
+  }));
+  await SysRoleDept.bulkCreate(roleDeptItems);
+
+  return sysRole;
+};
+
 module.exports = { 
   createSysRole,
   getAllSysRoles, 
@@ -227,6 +282,8 @@ module.exports = {
   updateSysRole,
   deleteSysRole,
   deleteSysRoles,
-  changeUseFlag
+  changeUseFlag,
+  findCheckRoleDept,
+  updateDataScope
 };
 
