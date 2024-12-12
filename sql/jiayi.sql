@@ -11,7 +11,7 @@
  Target Server Version : 50647
  File Encoding         : 65001
 
- Date: 01/12/2024 23:14:16
+ Date: 13/12/2024 00:43:41
 */
 
 SET NAMES utf8mb4;
@@ -313,7 +313,7 @@ CREATE TABLE `sys_logininfor`  (
   PRIMARY KEY (`info_id`) USING BTREE,
   INDEX `idx_sys_logininfor_s`(`status`) USING BTREE,
   INDEX `idx_sys_logininfor_lt`(`login_time`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 21 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '系统访问记录' ROW_FORMAT = Compact;
+) ENGINE = InnoDB AUTO_INCREMENT = 43 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '系统访问记录' ROW_FORMAT = Compact;
 
 -- ----------------------------
 -- Records of sys_logininfor
@@ -338,6 +338,28 @@ INSERT INTO `sys_logininfor` VALUES (17, 'jj', '127.0.0.1', '内网IP', 'Chrome'
 INSERT INTO `sys_logininfor` VALUES (18, 'admin', '127.0.0.1', '内网IP', 'Chrome', 'Windows', '0', '0', '登录成功', '2024-12-01 14:43:23', 'system', '2024-12-01 14:43:23', '', NULL);
 INSERT INTO `sys_logininfor` VALUES (19, 'admin', '127.0.0.1', '内网IP', 'Chrome', 'Windows', '0', '0', '登出成功', '2024-12-01 14:43:31', 'system', '2024-12-01 14:43:31', '', NULL);
 INSERT INTO `sys_logininfor` VALUES (20, 'admin', '127.0.0.1', '内网IP', 'Chrome', 'Linux', '0', '0', '登录成功', '2024-12-01 14:56:00', 'system', '2024-12-01 14:56:00', '', NULL);
+INSERT INTO `sys_logininfor` VALUES (21, 'admin', '127.0.0.1', '内网IP', 'Chrome', 'Windows', '0', '0', '登录成功', '2024-12-05 11:44:24', 'system', '2024-12-05 11:44:24', '', NULL);
+INSERT INTO `sys_logininfor` VALUES (22, 'admin', '127.0.0.1', '内网IP', 'Chrome', 'Windows', '0', '0', '登出成功', '2024-12-05 11:45:33', 'system', '2024-12-05 11:45:33', '', NULL);
+INSERT INTO `sys_logininfor` VALUES (23, 'admin', '127.0.0.1', '内网IP', 'Chrome', 'Windows', '0', '0', '登录成功', '2024-12-05 11:45:38', 'system', '2024-12-05 11:45:39', '', NULL);
+INSERT INTO `sys_logininfor` VALUES (24, 'admin', '127.0.0.1', '内网IP', 'Chrome', 'Windows', '0', '0', '登出成功', '2024-12-05 11:48:57', 'system', '2024-12-05 11:48:57', '', NULL);
+INSERT INTO `sys_logininfor` VALUES (25, 'admin', '127.0.0.1', '内网IP', 'Chrome', 'Windows', '0', '0', '登录成功', '2024-12-05 11:49:04', 'system', '2024-12-05 11:49:05', '', NULL);
+INSERT INTO `sys_logininfor` VALUES (26, 'admin', '127.0.0.1', '内网IP', 'Chrome', 'Windows', '1', '0', '用户名或密码错误', '2024-12-08 04:25:35', 'system', '2024-12-08 04:25:35', '', NULL);
+INSERT INTO `sys_logininfor` VALUES (27, 'admin', '127.0.0.1', '内网IP', 'Chrome', 'Windows', '0', '0', '登录成功', '2024-12-08 04:25:41', 'system', '2024-12-08 04:25:41', '', NULL);
+INSERT INTO `sys_logininfor` VALUES (28, 'admin', '127.0.0.1', '内网IP', 'Chrome', 'Windows', '0', '0', '登录成功', '2024-12-10 04:27:13', 'system', '2024-12-10 04:27:14', '', NULL);
+INSERT INTO `sys_logininfor` VALUES (29, 'admin', '127.0.0.1', '内网IP', 'Chrome', 'Windows', '1', '0', '验证码错误', '2024-12-10 05:20:07', 'system', '2024-12-10 05:20:07', '', NULL);
+INSERT INTO `sys_logininfor` VALUES (30, 'admin', '127.0.0.1', '内网IP', 'Chrome', 'Windows', '1', '0', '用户名或密码错误', '2024-12-10 05:20:50', 'system', '2024-12-10 05:20:50', '', NULL);
+INSERT INTO `sys_logininfor` VALUES (31, 'admin', '127.0.0.1', '内网IP', 'Chrome', 'Windows', '0', '0', '登录成功', '2024-12-10 13:00:33', 'system', '2024-12-10 13:00:33', '', NULL);
+INSERT INTO `sys_logininfor` VALUES (32, 'admin', '127.0.0.1', '内网IP', 'Chrome', 'Windows', '0', '0', '登录成功', '2024-12-10 13:46:25', 'system', '2024-12-10 13:46:25', '', NULL);
+INSERT INTO `sys_logininfor` VALUES (33, 'admin', '127.0.0.1', '内网IP', 'Chrome', 'Windows', '0', '0', '登录成功', '2024-12-10 15:29:34', 'system', '2024-12-10 15:29:34', '', NULL);
+INSERT INTO `sys_logininfor` VALUES (34, 'admin', '127.0.0.1', '内网IP', 'Chrome', 'Windows', '0', '0', '登录成功', '2024-12-10 15:37:26', 'system', '2024-12-10 15:37:26', '', NULL);
+INSERT INTO `sys_logininfor` VALUES (35, 'admin', '127.0.0.1', '内网IP', 'Chrome', 'Windows', '0', '0', '登录成功', '2024-12-11 06:56:44', 'system', '2024-12-11 06:56:45', '', NULL);
+INSERT INTO `sys_logininfor` VALUES (36, 'admin', '127.0.0.1', '内网IP', 'Chrome', 'Windows', '0', '0', '登出成功', '2024-12-11 06:58:04', 'system', '2024-12-11 06:58:04', '', NULL);
+INSERT INTO `sys_logininfor` VALUES (37, 'admin', '127.0.0.1', '内网IP', 'Chrome', 'Windows', '0', '0', '登录成功', '2024-12-11 07:01:26', 'system', '2024-12-11 07:01:26', '', NULL);
+INSERT INTO `sys_logininfor` VALUES (38, 'admin', '127.0.0.1', '内网IP', 'Chrome', 'Windows', '0', '0', '登录成功', '2024-12-11 07:08:41', 'system', '2024-12-11 07:08:41', '', NULL);
+INSERT INTO `sys_logininfor` VALUES (39, 'admin', '127.0.0.1', '内网IP', 'Chrome', 'Windows', '0', '0', '登录成功', '2024-12-11 12:49:51', 'system', '2024-12-11 12:49:51', '', NULL);
+INSERT INTO `sys_logininfor` VALUES (40, 'admin', '127.0.0.1', '内网IP', 'Chrome', 'Windows', '0', '0', '登录成功', '2024-12-11 12:57:11', 'system', '2024-12-11 12:57:11', '', NULL);
+INSERT INTO `sys_logininfor` VALUES (41, 'admin', '127.0.0.1', '内网IP', 'Chrome', 'Windows', '0', '0', '登录成功', '2024-12-11 14:15:46', 'system', '2024-12-11 14:15:46', '', NULL);
+INSERT INTO `sys_logininfor` VALUES (42, 'admin', '127.0.0.1', '内网IP', 'Chrome', 'Windows', '0', '0', '登录成功', '2024-12-12 11:58:34', 'system', '2024-12-12 11:58:34', '', NULL);
 
 -- ----------------------------
 -- Table structure for sys_menu
@@ -366,7 +388,7 @@ CREATE TABLE `sys_menu`  (
   `update_time` datetime(0) NULL DEFAULT NULL COMMENT '更新时间',
   `remark` varchar(500) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT '' COMMENT '备注',
   PRIMARY KEY (`menu_id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 2027 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '菜单权限表' ROW_FORMAT = Compact;
+) ENGINE = InnoDB AUTO_INCREMENT = 1055 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '菜单权限表' ROW_FORMAT = Compact;
 
 -- ----------------------------
 -- Records of sys_menu
@@ -440,21 +462,15 @@ INSERT INTO `sys_menu` VALUES (1042, '登录查询', 501, 1, '#', '', '', '', 1,
 INSERT INTO `sys_menu` VALUES (1043, '登录删除', 501, 2, '#', '', '', '', 1, 0, 'F', '0', '0', '0', 'monitor:logininfor:remove', '#', 'admin', '2024-10-18 16:22:00', '', NULL, '');
 INSERT INTO `sys_menu` VALUES (1044, '日志导出', 501, 3, '#', '', '', '', 1, 0, 'F', '0', '0', '0', 'monitor:logininfor:export', '#', 'admin', '2024-10-18 16:22:00', '', NULL, '');
 INSERT INTO `sys_menu` VALUES (1045, '账户解锁', 501, 4, '#', '', '', '', 1, 0, 'F', '0', '0', '0', 'monitor:logininfor:unlock', '#', 'admin', '2024-10-18 16:22:00', '', NULL, '');
-INSERT INTO `sys_menu` VALUES (1046, '在线查询', 109, 1, '#', '', '', '', 1, 0, 'F', '0', '0', '0', 'monitor:online:query', '#', 'admin', '2024-10-18 16:22:00', '', NULL, '');
-INSERT INTO `sys_menu` VALUES (1047, '批量强退', 109, 2, '#', '', '', '', 1, 0, 'F', '0', '0', '0', 'monitor:online:batchLogout', '#', 'admin', '2024-10-18 16:22:00', '', NULL, '');
-INSERT INTO `sys_menu` VALUES (1048, '单条强退', 109, 3, '#', '', '', '', 1, 0, 'F', '0', '0', '0', 'monitor:online:forceLogout', '#', 'admin', '2024-10-18 16:22:00', '', NULL, '');
+INSERT INTO `sys_menu` VALUES (1046, '在线查询', 109, 1, '#', '', '', '', 1, 0, 'F', '0', '2', '0', 'monitor:online:query', '#', 'admin', '2024-10-18 16:22:00', 'admin', '2024-12-10 13:03:10', '');
+INSERT INTO `sys_menu` VALUES (1047, '批量强退', 109, 2, '#', '', '', '', 1, 0, 'F', '0', '2', '0', 'monitor:online:batchLogout', '#', 'admin', '2024-10-18 16:22:00', 'admin', '2024-12-10 13:03:30', '');
+INSERT INTO `sys_menu` VALUES (1048, '单条强退', 109, 3, '#', '', '', '', 1, 0, 'F', '0', '2', '0', 'monitor:online:forceLogout', '#', 'admin', '2024-10-18 16:22:00', 'admin', '2024-12-10 13:03:26', '');
 INSERT INTO `sys_menu` VALUES (1049, '任务查询', 110, 1, '#', '', '', '', 1, 0, 'F', '0', '0', '0', 'monitor:job:query', '#', 'admin', '2024-10-18 16:22:00', '', NULL, '');
 INSERT INTO `sys_menu` VALUES (1050, '任务新增', 110, 2, '#', '', '', '', 1, 0, 'F', '0', '0', '0', 'monitor:job:add', '#', 'admin', '2024-10-18 16:22:00', '', NULL, '');
 INSERT INTO `sys_menu` VALUES (1051, '任务修改', 110, 3, '#', '', '', '', 1, 0, 'F', '0', '0', '0', 'monitor:job:edit', '#', 'admin', '2024-10-18 16:22:00', '', NULL, '');
 INSERT INTO `sys_menu` VALUES (1052, '任务删除', 110, 4, '#', '', '', '', 1, 0, 'F', '0', '0', '0', 'monitor:job:remove', '#', 'admin', '2024-10-18 16:22:00', '', NULL, '');
 INSERT INTO `sys_menu` VALUES (1053, '状态修改', 110, 5, '#', '', '', '', 1, 0, 'F', '0', '0', '0', 'monitor:job:changeStatus', '#', 'admin', '2024-10-18 16:22:00', '', NULL, '');
 INSERT INTO `sys_menu` VALUES (1054, '任务导出', 110, 6, '#', '', '', '', 1, 0, 'F', '0', '0', '0', 'monitor:job:export', '#', 'admin', '2024-10-18 16:22:00', '', NULL, '');
-INSERT INTO `sys_menu` VALUES (1055, '生成查询', 116, 1, '#', '', '', '', 1, 0, 'F', '0', '0', '0', 'tool:gen:query', '#', 'admin', '2024-10-18 16:22:00', '', NULL, '');
-INSERT INTO `sys_menu` VALUES (1056, '生成修改', 116, 2, '#', '', '', '', 1, 0, 'F', '0', '0', '0', 'tool:gen:edit', '#', 'admin', '2024-10-18 16:22:00', '', NULL, '');
-INSERT INTO `sys_menu` VALUES (1057, '生成删除', 116, 3, '#', '', '', '', 1, 0, 'F', '0', '0', '0', 'tool:gen:remove', '#', 'admin', '2024-10-18 16:22:00', '', NULL, '');
-INSERT INTO `sys_menu` VALUES (1058, '导入代码', 116, 4, '#', '', '', '', 1, 0, 'F', '0', '0', '0', 'tool:gen:import', '#', 'admin', '2024-10-18 16:22:00', '', NULL, '');
-INSERT INTO `sys_menu` VALUES (1059, '预览代码', 116, 5, '#', '', '', '', 1, 0, 'F', '0', '0', '0', 'tool:gen:preview', '#', 'admin', '2024-10-18 16:22:00', '', NULL, '');
-INSERT INTO `sys_menu` VALUES (1060, '生成代码', 116, 6, '#', '', '', '', 1, 0, 'F', '0', '0', '0', 'tool:gen:code', '#', 'admin', '2024-10-18 16:22:00', '', NULL, '');
 
 -- ----------------------------
 -- Table structure for sys_notice
@@ -513,7 +529,7 @@ CREATE TABLE `sys_oper_log`  (
   INDEX `idx_sys_oper_log_bt`(`business_type`) USING BTREE,
   INDEX `idx_sys_oper_log_s`(`oper_status`) USING BTREE,
   INDEX `idx_sys_oper_log_ot`(`oper_time`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 186 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '操作日志记录' ROW_FORMAT = Compact;
+) ENGINE = InnoDB AUTO_INCREMENT = 107 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '操作日志记录' ROW_FORMAT = Compact;
 
 -- ----------------------------
 -- Records of sys_oper_log
@@ -579,102 +595,124 @@ INSERT INTO `sys_role` VALUES (1, '超级管理员', 'admin', 1, '1', 1, 1, '0',
 INSERT INTO `sys_role` VALUES (2, '普通角色', 'common', 2, '2', 1, 1, '0', '0', 'admin', '2024-10-18 16:22:00', 'admin', '2024-12-01 04:33:17', '普通角色');
 
 -- ----------------------------
+-- Table structure for sys_role_dept
+-- ----------------------------
+DROP TABLE IF EXISTS `sys_role_dept`;
+CREATE TABLE `sys_role_dept`  (
+  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '主键ID',
+  `role_id` bigint(20) NOT NULL COMMENT '角色ID',
+  `dept_id` bigint(20) NOT NULL COMMENT '部门ID',
+  `create_by` varchar(64) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT '' COMMENT '创建者',
+  `create_time` datetime(0) NULL DEFAULT NULL COMMENT '创建时间',
+  `update_by` varchar(64) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT '' COMMENT '更新者',
+  `update_time` datetime(0) NULL DEFAULT NULL COMMENT '更新时间',
+  `status` char(1) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT '0' COMMENT '状态（0代表存在 2代表删除）',
+  PRIMARY KEY (`id`) USING BTREE
+) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '角色和部门关联表' ROW_FORMAT = Dynamic;
+
+-- ----------------------------
 -- Table structure for sys_role_menu
 -- ----------------------------
 DROP TABLE IF EXISTS `sys_role_menu`;
 CREATE TABLE `sys_role_menu`  (
+  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '主键ID',
   `role_id` int(11) NOT NULL COMMENT '角色ID',
   `menu_id` int(10) NOT NULL COMMENT '菜单ID',
-  PRIMARY KEY (`role_id`, `menu_id`) USING BTREE
-) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '角色和菜单关联表' ROW_FORMAT = Compact;
+  `create_by` varchar(64) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT '' COMMENT '创建者',
+  `create_time` datetime(0) NULL DEFAULT NULL COMMENT '创建时间',
+  `update_by` varchar(64) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT '' COMMENT '更新者',
+  `update_time` datetime(0) NULL DEFAULT NULL COMMENT '更新时间',
+  `status` char(1) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT '0' COMMENT '状态（0代表存在 2代表删除）',
+  PRIMARY KEY (`id`) USING BTREE
+) ENGINE = InnoDB AUTO_INCREMENT = 85 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '角色和菜单关联表' ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of sys_role_menu
 -- ----------------------------
-INSERT INTO `sys_role_menu` VALUES (2, 1);
-INSERT INTO `sys_role_menu` VALUES (2, 2);
-INSERT INTO `sys_role_menu` VALUES (2, 3);
-INSERT INTO `sys_role_menu` VALUES (2, 100);
-INSERT INTO `sys_role_menu` VALUES (2, 101);
-INSERT INTO `sys_role_menu` VALUES (2, 102);
-INSERT INTO `sys_role_menu` VALUES (2, 103);
-INSERT INTO `sys_role_menu` VALUES (2, 104);
-INSERT INTO `sys_role_menu` VALUES (2, 105);
-INSERT INTO `sys_role_menu` VALUES (2, 106);
-INSERT INTO `sys_role_menu` VALUES (2, 107);
-INSERT INTO `sys_role_menu` VALUES (2, 108);
-INSERT INTO `sys_role_menu` VALUES (2, 109);
-INSERT INTO `sys_role_menu` VALUES (2, 110);
-INSERT INTO `sys_role_menu` VALUES (2, 111);
-INSERT INTO `sys_role_menu` VALUES (2, 112);
-INSERT INTO `sys_role_menu` VALUES (2, 113);
-INSERT INTO `sys_role_menu` VALUES (2, 114);
-INSERT INTO `sys_role_menu` VALUES (2, 115);
-INSERT INTO `sys_role_menu` VALUES (2, 116);
-INSERT INTO `sys_role_menu` VALUES (2, 117);
-INSERT INTO `sys_role_menu` VALUES (2, 500);
-INSERT INTO `sys_role_menu` VALUES (2, 501);
-INSERT INTO `sys_role_menu` VALUES (2, 1000);
-INSERT INTO `sys_role_menu` VALUES (2, 1001);
-INSERT INTO `sys_role_menu` VALUES (2, 1002);
-INSERT INTO `sys_role_menu` VALUES (2, 1003);
-INSERT INTO `sys_role_menu` VALUES (2, 1004);
-INSERT INTO `sys_role_menu` VALUES (2, 1005);
-INSERT INTO `sys_role_menu` VALUES (2, 1006);
-INSERT INTO `sys_role_menu` VALUES (2, 1007);
-INSERT INTO `sys_role_menu` VALUES (2, 1008);
-INSERT INTO `sys_role_menu` VALUES (2, 1009);
-INSERT INTO `sys_role_menu` VALUES (2, 1010);
-INSERT INTO `sys_role_menu` VALUES (2, 1011);
-INSERT INTO `sys_role_menu` VALUES (2, 1012);
-INSERT INTO `sys_role_menu` VALUES (2, 1013);
-INSERT INTO `sys_role_menu` VALUES (2, 1014);
-INSERT INTO `sys_role_menu` VALUES (2, 1015);
-INSERT INTO `sys_role_menu` VALUES (2, 1016);
-INSERT INTO `sys_role_menu` VALUES (2, 1017);
-INSERT INTO `sys_role_menu` VALUES (2, 1018);
-INSERT INTO `sys_role_menu` VALUES (2, 1019);
-INSERT INTO `sys_role_menu` VALUES (2, 1020);
-INSERT INTO `sys_role_menu` VALUES (2, 1021);
-INSERT INTO `sys_role_menu` VALUES (2, 1022);
-INSERT INTO `sys_role_menu` VALUES (2, 1023);
-INSERT INTO `sys_role_menu` VALUES (2, 1024);
-INSERT INTO `sys_role_menu` VALUES (2, 1025);
-INSERT INTO `sys_role_menu` VALUES (2, 1026);
-INSERT INTO `sys_role_menu` VALUES (2, 1027);
-INSERT INTO `sys_role_menu` VALUES (2, 1028);
-INSERT INTO `sys_role_menu` VALUES (2, 1029);
-INSERT INTO `sys_role_menu` VALUES (2, 1030);
-INSERT INTO `sys_role_menu` VALUES (2, 1031);
-INSERT INTO `sys_role_menu` VALUES (2, 1032);
-INSERT INTO `sys_role_menu` VALUES (2, 1033);
-INSERT INTO `sys_role_menu` VALUES (2, 1034);
-INSERT INTO `sys_role_menu` VALUES (2, 1035);
-INSERT INTO `sys_role_menu` VALUES (2, 1036);
-INSERT INTO `sys_role_menu` VALUES (2, 1037);
-INSERT INTO `sys_role_menu` VALUES (2, 1038);
-INSERT INTO `sys_role_menu` VALUES (2, 1039);
-INSERT INTO `sys_role_menu` VALUES (2, 1040);
-INSERT INTO `sys_role_menu` VALUES (2, 1041);
-INSERT INTO `sys_role_menu` VALUES (2, 1042);
-INSERT INTO `sys_role_menu` VALUES (2, 1043);
-INSERT INTO `sys_role_menu` VALUES (2, 1044);
-INSERT INTO `sys_role_menu` VALUES (2, 1045);
-INSERT INTO `sys_role_menu` VALUES (2, 1046);
-INSERT INTO `sys_role_menu` VALUES (2, 1047);
-INSERT INTO `sys_role_menu` VALUES (2, 1048);
-INSERT INTO `sys_role_menu` VALUES (2, 1049);
-INSERT INTO `sys_role_menu` VALUES (2, 1050);
-INSERT INTO `sys_role_menu` VALUES (2, 1051);
-INSERT INTO `sys_role_menu` VALUES (2, 1052);
-INSERT INTO `sys_role_menu` VALUES (2, 1053);
-INSERT INTO `sys_role_menu` VALUES (2, 1054);
-INSERT INTO `sys_role_menu` VALUES (2, 1055);
-INSERT INTO `sys_role_menu` VALUES (2, 1056);
-INSERT INTO `sys_role_menu` VALUES (2, 1057);
-INSERT INTO `sys_role_menu` VALUES (2, 1058);
-INSERT INTO `sys_role_menu` VALUES (2, 1059);
-INSERT INTO `sys_role_menu` VALUES (2, 1060);
+INSERT INTO `sys_role_menu` VALUES (1, 2, 1, '', NULL, '', NULL, '0');
+INSERT INTO `sys_role_menu` VALUES (2, 2, 2, '', NULL, '', NULL, '0');
+INSERT INTO `sys_role_menu` VALUES (3, 2, 3, '', NULL, '', NULL, '0');
+INSERT INTO `sys_role_menu` VALUES (4, 2, 100, '', NULL, '', NULL, '0');
+INSERT INTO `sys_role_menu` VALUES (5, 2, 101, '', NULL, '', NULL, '0');
+INSERT INTO `sys_role_menu` VALUES (6, 2, 102, '', NULL, '', NULL, '0');
+INSERT INTO `sys_role_menu` VALUES (7, 2, 103, '', NULL, '', NULL, '0');
+INSERT INTO `sys_role_menu` VALUES (8, 2, 104, '', NULL, '', NULL, '0');
+INSERT INTO `sys_role_menu` VALUES (9, 2, 105, '', NULL, '', NULL, '0');
+INSERT INTO `sys_role_menu` VALUES (10, 2, 106, '', NULL, '', NULL, '0');
+INSERT INTO `sys_role_menu` VALUES (11, 2, 107, '', NULL, '', NULL, '0');
+INSERT INTO `sys_role_menu` VALUES (12, 2, 108, '', NULL, '', NULL, '0');
+INSERT INTO `sys_role_menu` VALUES (13, 2, 109, '', NULL, '', NULL, '0');
+INSERT INTO `sys_role_menu` VALUES (14, 2, 110, '', NULL, '', NULL, '0');
+INSERT INTO `sys_role_menu` VALUES (15, 2, 111, '', NULL, '', NULL, '0');
+INSERT INTO `sys_role_menu` VALUES (16, 2, 112, '', NULL, '', NULL, '0');
+INSERT INTO `sys_role_menu` VALUES (17, 2, 113, '', NULL, '', NULL, '0');
+INSERT INTO `sys_role_menu` VALUES (18, 2, 114, '', NULL, '', NULL, '0');
+INSERT INTO `sys_role_menu` VALUES (19, 2, 115, '', NULL, '', NULL, '0');
+INSERT INTO `sys_role_menu` VALUES (20, 2, 116, '', NULL, '', NULL, '0');
+INSERT INTO `sys_role_menu` VALUES (21, 2, 117, '', NULL, '', NULL, '0');
+INSERT INTO `sys_role_menu` VALUES (22, 2, 500, '', NULL, '', NULL, '0');
+INSERT INTO `sys_role_menu` VALUES (23, 2, 501, '', NULL, '', NULL, '0');
+INSERT INTO `sys_role_menu` VALUES (24, 2, 1000, '', NULL, '', NULL, '0');
+INSERT INTO `sys_role_menu` VALUES (25, 2, 1001, '', NULL, '', NULL, '0');
+INSERT INTO `sys_role_menu` VALUES (26, 2, 1002, '', NULL, '', NULL, '0');
+INSERT INTO `sys_role_menu` VALUES (27, 2, 1003, '', NULL, '', NULL, '0');
+INSERT INTO `sys_role_menu` VALUES (28, 2, 1004, '', NULL, '', NULL, '0');
+INSERT INTO `sys_role_menu` VALUES (29, 2, 1005, '', NULL, '', NULL, '0');
+INSERT INTO `sys_role_menu` VALUES (30, 2, 1006, '', NULL, '', NULL, '0');
+INSERT INTO `sys_role_menu` VALUES (31, 2, 1007, '', NULL, '', NULL, '0');
+INSERT INTO `sys_role_menu` VALUES (32, 2, 1008, '', NULL, '', NULL, '0');
+INSERT INTO `sys_role_menu` VALUES (33, 2, 1009, '', NULL, '', NULL, '0');
+INSERT INTO `sys_role_menu` VALUES (34, 2, 1010, '', NULL, '', NULL, '0');
+INSERT INTO `sys_role_menu` VALUES (35, 2, 1011, '', NULL, '', NULL, '0');
+INSERT INTO `sys_role_menu` VALUES (36, 2, 1012, '', NULL, '', NULL, '0');
+INSERT INTO `sys_role_menu` VALUES (37, 2, 1013, '', NULL, '', NULL, '0');
+INSERT INTO `sys_role_menu` VALUES (38, 2, 1014, '', NULL, '', NULL, '0');
+INSERT INTO `sys_role_menu` VALUES (39, 2, 1015, '', NULL, '', NULL, '0');
+INSERT INTO `sys_role_menu` VALUES (40, 2, 1016, '', NULL, '', NULL, '0');
+INSERT INTO `sys_role_menu` VALUES (41, 2, 1017, '', NULL, '', NULL, '0');
+INSERT INTO `sys_role_menu` VALUES (42, 2, 1018, '', NULL, '', NULL, '0');
+INSERT INTO `sys_role_menu` VALUES (43, 2, 1019, '', NULL, '', NULL, '0');
+INSERT INTO `sys_role_menu` VALUES (44, 2, 1020, '', NULL, '', NULL, '0');
+INSERT INTO `sys_role_menu` VALUES (45, 2, 1021, '', NULL, '', NULL, '0');
+INSERT INTO `sys_role_menu` VALUES (46, 2, 1022, '', NULL, '', NULL, '0');
+INSERT INTO `sys_role_menu` VALUES (47, 2, 1023, '', NULL, '', NULL, '0');
+INSERT INTO `sys_role_menu` VALUES (48, 2, 1024, '', NULL, '', NULL, '0');
+INSERT INTO `sys_role_menu` VALUES (49, 2, 1025, '', NULL, '', NULL, '0');
+INSERT INTO `sys_role_menu` VALUES (50, 2, 1026, '', NULL, '', NULL, '0');
+INSERT INTO `sys_role_menu` VALUES (51, 2, 1027, '', NULL, '', NULL, '0');
+INSERT INTO `sys_role_menu` VALUES (52, 2, 1028, '', NULL, '', NULL, '0');
+INSERT INTO `sys_role_menu` VALUES (53, 2, 1029, '', NULL, '', NULL, '0');
+INSERT INTO `sys_role_menu` VALUES (54, 2, 1030, '', NULL, '', NULL, '0');
+INSERT INTO `sys_role_menu` VALUES (55, 2, 1031, '', NULL, '', NULL, '0');
+INSERT INTO `sys_role_menu` VALUES (56, 2, 1032, '', NULL, '', NULL, '0');
+INSERT INTO `sys_role_menu` VALUES (57, 2, 1033, '', NULL, '', NULL, '0');
+INSERT INTO `sys_role_menu` VALUES (58, 2, 1034, '', NULL, '', NULL, '0');
+INSERT INTO `sys_role_menu` VALUES (59, 2, 1035, '', NULL, '', NULL, '0');
+INSERT INTO `sys_role_menu` VALUES (60, 2, 1036, '', NULL, '', NULL, '0');
+INSERT INTO `sys_role_menu` VALUES (61, 2, 1037, '', NULL, '', NULL, '0');
+INSERT INTO `sys_role_menu` VALUES (62, 2, 1038, '', NULL, '', NULL, '0');
+INSERT INTO `sys_role_menu` VALUES (63, 2, 1039, '', NULL, '', NULL, '0');
+INSERT INTO `sys_role_menu` VALUES (64, 2, 1040, '', NULL, '', NULL, '0');
+INSERT INTO `sys_role_menu` VALUES (65, 2, 1041, '', NULL, '', NULL, '0');
+INSERT INTO `sys_role_menu` VALUES (66, 2, 1042, '', NULL, '', NULL, '0');
+INSERT INTO `sys_role_menu` VALUES (67, 2, 1043, '', NULL, '', NULL, '0');
+INSERT INTO `sys_role_menu` VALUES (68, 2, 1044, '', NULL, '', NULL, '0');
+INSERT INTO `sys_role_menu` VALUES (69, 2, 1045, '', NULL, '', NULL, '0');
+INSERT INTO `sys_role_menu` VALUES (70, 2, 1046, '', NULL, '', NULL, '0');
+INSERT INTO `sys_role_menu` VALUES (71, 2, 1047, '', NULL, '', NULL, '0');
+INSERT INTO `sys_role_menu` VALUES (72, 2, 1048, '', NULL, '', NULL, '0');
+INSERT INTO `sys_role_menu` VALUES (73, 2, 1049, '', NULL, '', NULL, '0');
+INSERT INTO `sys_role_menu` VALUES (74, 2, 1050, '', NULL, '', NULL, '0');
+INSERT INTO `sys_role_menu` VALUES (75, 2, 1051, '', NULL, '', NULL, '0');
+INSERT INTO `sys_role_menu` VALUES (76, 2, 1052, '', NULL, '', NULL, '0');
+INSERT INTO `sys_role_menu` VALUES (77, 2, 1053, '', NULL, '', NULL, '0');
+INSERT INTO `sys_role_menu` VALUES (78, 2, 1054, '', NULL, '', NULL, '0');
+INSERT INTO `sys_role_menu` VALUES (79, 2, 1055, '', NULL, '', NULL, '0');
+INSERT INTO `sys_role_menu` VALUES (80, 2, 1056, '', NULL, '', NULL, '0');
+INSERT INTO `sys_role_menu` VALUES (81, 2, 1057, '', NULL, '', NULL, '0');
+INSERT INTO `sys_role_menu` VALUES (82, 2, 1058, '', NULL, '', NULL, '0');
+INSERT INTO `sys_role_menu` VALUES (83, 2, 1059, '', NULL, '', NULL, '0');
+INSERT INTO `sys_role_menu` VALUES (84, 2, 1060, '', NULL, '', NULL, '0');
 
 -- ----------------------------
 -- Table structure for sys_user
@@ -706,7 +744,7 @@ CREATE TABLE `sys_user`  (
 -- ----------------------------
 -- Records of sys_user
 -- ----------------------------
-INSERT INTO `sys_user` VALUES (1, 103, 'admin', '嘉仪管理员', '00', 'jy@163.com', '15888888888', '1', '', '$2b$10$fXm/RvEj7ydS5uZ/YwpzqeG5eowyin5hqZvJa2ax/R84Kpc0sostC', '0', '0', '127.0.0.1', '2024-12-01 14:56:00', 'admin', '2024-10-18 16:22:00', 'system', '2024-12-01 04:53:18', '管理员');
+INSERT INTO `sys_user` VALUES (1, 103, 'admin', '嘉仪管理员', '00', 'jy@163.com', '15888888888', '1', '', '$2b$10$fXm/RvEj7ydS5uZ/YwpzqeG5eowyin5hqZvJa2ax/R84Kpc0sostC', '0', '0', '127.0.0.1', '2024-12-12 11:58:34', 'admin', '2024-10-18 16:22:00', 'system', '2024-12-01 04:53:18', '管理员');
 INSERT INTO `sys_user` VALUES (2, 105, 'jy', '嘉仪', '00', 'ry@qq.com', '15666666666', '1', '', '$2b$10$hZtSG62.3SRHqX8WYhk1F.XRAn8XtZuitcJdBIakNCF77ExKiAxNW', '0', '0', '127.0.0.1', '2024-12-01 04:53:41', 'admin', '2024-10-18 16:22:00', 'system', '2024-12-01 04:53:54', '测试员');
 INSERT INTO `sys_user` VALUES (3, 103, 'jj', '加加', '00', '', '', '0', '', '$2b$10$f2viHrOj59g0/rOBwelOze2zxNHyF9t99N6hWYZZmOKKHn/f9GmKu', '0', '0', '', '2024-12-01 04:54:10', 'admin', '2024-12-01 03:45:07', 'system', '2024-12-01 03:56:30', NULL);
 
@@ -715,33 +753,45 @@ INSERT INTO `sys_user` VALUES (3, 103, 'jj', '加加', '00', '', '', '0', '', '$
 -- ----------------------------
 DROP TABLE IF EXISTS `sys_user_post`;
 CREATE TABLE `sys_user_post`  (
+  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '主键',
   `user_id` int(10) NOT NULL COMMENT '用户ID',
   `post_id` int(10) NOT NULL COMMENT '岗位ID',
-  PRIMARY KEY (`user_id`, `post_id`) USING BTREE
-) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '用户与岗位关联表' ROW_FORMAT = Compact;
+  `create_by` varchar(64) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT '' COMMENT '创建者',
+  `create_time` datetime(0) NULL DEFAULT NULL COMMENT '创建时间',
+  `update_by` varchar(64) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT '' COMMENT '更新者',
+  `update_time` datetime(0) NULL DEFAULT NULL COMMENT '更新时间',
+  `status` char(1) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT '0' COMMENT '状态（0代表存在 2代表删除）',
+  PRIMARY KEY (`id`) USING BTREE
+) ENGINE = InnoDB AUTO_INCREMENT = 3 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '用户与岗位关联表' ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of sys_user_post
 -- ----------------------------
-INSERT INTO `sys_user_post` VALUES (1, 1);
-INSERT INTO `sys_user_post` VALUES (2, 2);
+INSERT INTO `sys_user_post` VALUES (1, 1, 1, '', NULL, '', NULL, '0');
+INSERT INTO `sys_user_post` VALUES (2, 2, 2, '', NULL, '', NULL, '0');
 
 -- ----------------------------
 -- Table structure for sys_user_role
 -- ----------------------------
 DROP TABLE IF EXISTS `sys_user_role`;
 CREATE TABLE `sys_user_role`  (
+  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '主键',
   `user_id` int(10) NOT NULL COMMENT '用户ID',
   `role_id` int(10) NOT NULL COMMENT '角色ID',
-  PRIMARY KEY (`user_id`, `role_id`) USING BTREE
-) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '用户和角色关联表' ROW_FORMAT = Compact;
+  `create_by` varchar(64) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT '' COMMENT '创建者',
+  `create_time` datetime(0) NULL DEFAULT NULL COMMENT '创建时间',
+  `update_by` varchar(64) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT '' COMMENT '更新者',
+  `update_time` datetime(0) NULL DEFAULT NULL COMMENT '更新时间',
+  `status` char(1) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT '0' COMMENT '状态（0代表存在 2代表删除）',
+  PRIMARY KEY (`id`) USING BTREE
+) ENGINE = InnoDB AUTO_INCREMENT = 4 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '用户和角色关联表' ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of sys_user_role
 -- ----------------------------
-INSERT INTO `sys_user_role` VALUES (1, 2);
-INSERT INTO `sys_user_role` VALUES (2, 2);
-INSERT INTO `sys_user_role` VALUES (3, 2);
+INSERT INTO `sys_user_role` VALUES (1, 1, 2, '', NULL, '', NULL, '0');
+INSERT INTO `sys_user_role` VALUES (2, 2, 2, '', NULL, '', NULL, '0');
+INSERT INTO `sys_user_role` VALUES (3, 3, 2, '', NULL, '', NULL, '0');
 
 -- ----------------------------
 -- Table structure for td_images

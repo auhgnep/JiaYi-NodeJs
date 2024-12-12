@@ -265,9 +265,7 @@ const updateDataScope = async (req) => {
 
   const roleDeptItems = deptIds.map(deptId => ({
     roleId: sysRole.roleId,
-    deptId,
-    createTime: new Date(),
-    createBy: req.user?.username || 'system'
+    deptId
   }));
   await SysRoleDept.bulkCreate(roleDeptItems);
 
