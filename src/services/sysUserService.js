@@ -120,6 +120,9 @@ async function getChildDeptIds(deptId) {
 
 const getSysUsers = async (req, res) => {
   const { deptId, pageNum: pageParam, pageSize: limitParam, sort = 'createTime,ASC', ...filters } = req.query;
+  const isAllocated = req.query.isAllocated || '0';
+  const isUnAllocated = req.query.isUnAllocated || '0';
+  const roleId = req.query.roleId;
 
   const page = Number(pageParam) || 1;
   const limit = Number(limitParam) || 10;
@@ -131,6 +134,30 @@ const getSysUsers = async (req, res) => {
   const whereClause = {
     status: '0'
   };
+
+  if (isAllocated === '1' && roleId) {
+    const sysUserRoles = await SysUserRole.findAll({
+      where: {
+        roleId
+      }
+    });
+
+    let userIdList = sysUserRoles.map(item => item.userId)
+    whereClause.userId = { 
+      [Op.in]: userIdList 
+    };
+  } else if (isUnAllocated === '1' && roleId) {
+    const sysUserRoles = await SysUserRole.findAll({
+      where: {
+        roleId
+      }
+    });
+
+    let userIdList = sysUserRoles.map(item => item.userId)
+    whereClause.userId = { 
+      [Op.notIn]: userIdList 
+    };
+  }
 
   // 获取模型定义的所有属性
   const modelAttributes = Object.keys(SysUser.rawAttributes);
@@ -420,7 +447,7 @@ const getUserAddInfo = async (userId) => {
 
   let sysRoles = [];
   
-  if (userId === '1') {
+  if (userId === 1) {
     // 超级管理员直接查询所有正常状态的角色
     sysRoles = await SysRole.findAll({
       where: {
@@ -611,7 +638,7 @@ const getAuthRole = async (userId, queryUserId) => {
   const queryRoleIds = querySysUser.roleIds
   let roles = [];
   
-  if (userId === '1') {
+  if (userId === 1) {
     const sysRoles = await SysRole.findAll({
       where: {
         status: '0'
@@ -864,6 +891,39 @@ const changeUseFlag = async (userId, useFlag) => {
   return updateData
 };
 
+const cancelAuthRoleForUserId = async (roleId, userId) => {
+  await cancelAuthRoleForUserList(roleId, userId)
+}
+
+const cancelAuthRoleForUserList = async (roleId, userIds) => {
+  if (!roleId || !userIds) {
+    return
+  }
+
+  const userIdList = userIds.toString().split(',')
+  await SysUserRole.destroy({
+    where: {
+      roleId,
+      userId: {
+        [Op.in]: userIdList
+      }
+    }
+  });
+}
+
+const authRoleForUserList = async (roleId, userIds) => {
+  if (!roleId || !userIds) {
+    return
+  }
+
+  const userIdList = userIds.toString().split(',')
+  const userRoles = userIdList.map(userId => ({
+    userId,
+    roleId
+  }));
+  await SysUserRole.bulkCreate(userRoles);
+}
+
 module.exports = { 
   createSysUser,
   getAllSysUsers, 
@@ -882,6 +942,9 @@ module.exports = {
   importData,
   exportData,
   getImportTemplate,
-  changeUseFlag
+  changeUseFlag,
+  cancelAuthRoleForUserId,
+  cancelAuthRoleForUserList,
+  authRoleForUserList
 };
 

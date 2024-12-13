@@ -209,7 +209,7 @@ const getTreeselect = async (userId) => {
   `;
   let menus = []
 
-  if (userId === '1') {
+  if (userId === 1) {
     menus = await SysMenu.findAll({
       where: {
         status: '0'  // 状态正常的菜单
