@@ -83,7 +83,7 @@ router.get('/deptTree/:roleId', async(req, res) => {
     const userId = (req.user || {}).userId
     const roleId = req.params.roleId
     const deptTree = await deptService.getDeptTree(userId)
-    const checkedKeys = await service.findCheckRoleDept(userId)
+    const checkedKeys = await service.findCheckRoleDept(roleId)
     const result = {
       depts: deptTree,
       checkedKeys: checkedKeys
