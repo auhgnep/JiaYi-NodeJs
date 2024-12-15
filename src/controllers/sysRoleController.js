@@ -135,7 +135,7 @@ router.patch('/authUser/cancel', async(req, res) => {
 
 router.patch('/authUser/cancelAll', async(req, res) => {
   try {
-    const { roleId, userIds } = req.query
+    const { roleId, userIds } = req.body
     const result = await userService.cancelAuthRoleForUserList(roleId, userIds)
     res.success(result, '操作成功');
   } catch(error) {
@@ -145,7 +145,7 @@ router.patch('/authUser/cancelAll', async(req, res) => {
 
 router.patch('/authUser/selectAll', async(req, res) => {
   try {
-    const { roleId, userIds } = req.query
+    const { roleId, userIds } = req.body
     const result = await userService.authRoleForUserList(roleId, userIds)
     res.success(result, '操作成功');
   } catch(error) {
